@@ -1,3 +1,515 @@
-nav {
-    background-color: black;
+// Created a mixin (variable) to respond to different breakpoints
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'small' {
+        @media (max-width: 576px) { @content; }
+    }
+    @else if $breakpoint == 'medium' {
+        @media (max-width: 768px) { @content; }
+    }
+    @else if $breakpoint == 'large' {
+        @media (max-width: 992px) { @content; }
+    }
+    @else if $breakpoint == 'xlarge' {
+        @media (max-width: 1200px) { @content; }
+    }
+} // End of mixin 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #f5f5f5;
+    display: block;
+    justify-content: center;
+}
+
+#main-picture-container {
+    display: grid;
+    grid-template-areas: "stack";
+    width: 100%;
+    height: 750px;
+    margin: 0;
+    padding: 0;
+
+    #down-arrows {
+        fill: #209FC2;
+    }
+}
+
+#main-picture-container #main-picture{
+    grid-area: stack;
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    
+
+}
+
+#logo-picture {
+    z-index: 2;
+    width: 35%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#down-arrows {
+    z-index: 2;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 5%;
+    fill: aquamarine;
+
+    &:hover {
+        cursor: pointer;
+        fill: #209FC2;
+        transform: scaleX(2, 0.5);
+        transition: transform 0.3s ease-in-out;
+
+    }
+}
+
+#main-picture {
+    z-index: 1;
+}
+
+
+#resume_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+      
+      
+      p {
+          max-width: 525px;
+          font-size: 32px;
+          margin: 10px;
+          padding: 10px;
+      }
+      
+      .resume__header {
+          text-align: center;
+          font-size: 64px;
+          font-family: 'Libre Baskerville', serif;
+          color: #209FC2;
+      }
+      
+      button {
+          display: inline-flex;
+          text-align: center;
+          font-family: 'Libre Baskerville', serif;
+          border-radius: 5px;
+          font-size: 24px;
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          background-color: #209FC2;
+      }
+      
+      #resume__items {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          text-align: center;
+          padding: 20px;
+          margin: 20px;
+      }	
+
+      #skills-container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      #resume_items_bio {
+            margin: 20px;
+            padding: 20px;
+      }
+      
+      table {
+          border-spacing: 1em;
+          align-items: center;
+          justify-content: center; 
+          text-align: center;
+          width: 100%;
+      }
+      
+      
+      td {
+          padding: 15px;
+          background-color: #209FC2;
+          border-radius: 15px;
+          font-size: 14px;
+          text-transform: uppercase;
+          width: 10px;
+          height: 10px;
+          
+          
+      }
+      
+    #resume__picture img {
+        width: 649px;
+        height: 811px;
+    }
+  
+          
+  }
+  
+      
+  #projects__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  
+    .projects__figures {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 20px;
+      text-align: center;
+      align-items: center;
+    }
+
+    img {
+        width: 500px;
+        height: 500px;
+    }
+  
+    p {
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    button {
+      background-color: #209fc2;
+      margin: 10px auto;
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 5px;
+      border-radius: 10px;
+    }
+  
+    #github__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-size: 24px;
+        padding-bottom: 50px;
+      }
+
+      
+    }
+  
+    #github__button {
+      background-color: #209fc2;
+      display: flex;
+      flex-direction: row;
+      font-size: 24px;
+      align-items: center;
+      padding: 5px;
+      border-radius: 50px;
+  
+    
+      p {
+        padding: 20px;
+        margin: 10px;
+      }
+  
+      img {
+        border-radius: 50px;
+        padding-right: 5px;
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    background-color: #209FC2;
+    padding: 25px;
+    
+  
+    #footer__copyright__container {
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    #footer__media__container {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    
+    
+    
+  }
+       
+      
+  
+  
+  
+  
+
+
+@include respond-to('small') {
+    #main-picture {
+        width: 412px;
+        height: 247px;
+        object-fit: cover;
+        object-position: center right;
+    }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#contact__section__items {
+  background-color: #414450;
+  opacity: 75%;
+  color: #FFFFFF;
+}
+
+#contact__section__items {
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+
+    
+  img {
+    height: 475px;
+    // width: 577px;
+    width: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  
+  input, select, button {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  textarea {
+    min-height: 200px;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+
+  .form__element {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    &.buttons {
+      display: flex;
+    flex-direction: row;
+    justify-content: center; // Centers the buttons
+    gap: 10px; // Adds space between buttons
+    }
+
+    label {
+      font-size: 24px;
+    }
+
+    input {
+      border-radius: 5px;
+      padding: 10px 10px;
+      border: 1px solid #ccc;
+    }
+    
+  #form__buttons {
+  display: flex;
+  justify-content: center; // Centers the buttons horizontally
+  align-items: center; // Ensures vertical alignment
+  gap: 10px; // Adds space between buttons
+  margin-top: 10px; // Optional spacing above the buttons
+  width: 100%; // Ensures the container spans full width
+  }
+    
+    input[type="submit"],
+    input[type="reset"] {
+       width: 40%; // Buttons take up only 40% of the container width
+    max-width: 200px; // Prevents buttons from becoming too large on wider screens
+    min-width: 120px; // Ensures they don't become too small
+    background-color: #209FC2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+
+      &:hover {
+        background-color: darkblue;
+      }
+      
+     
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  #contact__section__items {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+    #projects__section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    #projects__section .projects__figures {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    #projects__section img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #github__button {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #github__button img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #github__button p {
+        font-size: 18px;
+    }
+
+    #resume_section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+        p {
+            max-width: 50%;
+            font-size: 24px;
+        }
+
+    } // End of resume_section media query
+
+    #main-picture-container {
+        height: 400px;
+
+        #main-picture {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: top right;
+        }
+
+        #logo-picture {
+            // z-index: 2;
+            width: 75%;
+            height: auto;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);;
+        }
+
+        #down-arrows {
+            top: 80%;
+            left: 50%;
+            width: 10%;
+            position: absolute;
+            top: 37%;
+        }
+
+
+    } // End of main-picture-container media query
+
+    #resume_section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+
+        #resume_items_bio {
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+    
+        }
+
+        p {
+            width: 75%;
+            font-size: 18px;
+            text-align: center;
+            margin: 0 auto;
+
+        }
+
+        table {
+            width: 75%;
+            border-spacing: 0.5em;
+            margin: 0 auto;
+        }
+
+    
+
+        
+    } // End of resume_section media query
+
+
+  
+} // End of media query for screen and max-width 768px

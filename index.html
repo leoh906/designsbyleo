@@ -3,23 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designs By Leo</title>
+    <title>Designs by Leo</title>
+    <link rel="icon" type="image/x-icon" href="designsbyleofavicon.png">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <nav>
-        <div>Designs by Leo</div>
-        
-        <div>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
+    <div id="main-picture-container">
+        <img src="main-picture.jpg" alt="Palm Trees on a Beach" id="main-picture">
+        <img src="designsbyleo_logo.png" alt="company logo" id="logo-picture">
+        <img src="doublearrowdownblue.svg" alt="doublechevron" id="down-arrows">
+    </div>
+    <section id="resume_section">
+        <h1 class="resume__header">About</h1>
+        <div id="resume__items">
+          <div id="resume_items_bio">
+            <p>A dedicated web developer with a mobile-first design approach.</p>
+            <p>Ensure your business stands out with professional web development services and proper maintenance.</p>
+            <button>
+              Resume 
+              <span class="material-symbols-outlined">download</span>
+            </button>
+      
+            <div id="skills-container">
+              <h2>Skills</h2>
+              <table>
+                <tr>
+                  <td>WordPress</td>
+                  <td>HTML</td>
+                  <td>CSS</td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>Sass</td>
+                  <td>Python</td>
+                </tr>
+                <tr>
+                  <td>Graphic Design</td>
+                  <td>Teaching</td>
+                  <td>GitHub</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+      
+          <div id="resume__picture">
+            <img src="alejandro-luengo-jMCOul3CK9U-unsplash.jpg" alt="Road in the Philippines">
+          </div>
         </div>
+    </section>
+
+      <section id="projects__section">
+        <div class="projects__figures">
+          <img src="Charlottesville_logo.jpg">
+          <p class="figure__summary">A website made for a professional football team in the United States.
+          </p>
+          <button>View</button>
+        </div>
+      
+        <div class="projects__figures">
+          <img src="towardsat.png">
+          <p>A defunct personal project aimed at increasing awareness of Web Accessibility Standards and emerging technology for individuals with disabilities.
+          </p>
+          <button>View</button>
+        </div>
+      
+        <div class="projects__figures">
+          <img src="New Website Blue Mockup Instagram - Laptop.png">
+          <p>Managed the clinic’s WordPress site. Edited and translated videos and images for the website in both English and Spanish.
+          </p>
+          <button>View</button>
+        </div>
+      
+        <div class="projects__figures" id="github__section">
+          <h2>View More on GitHub</h2>
+          <div id="github__button">
+            <img src="1298743_github_git_logo_social_icon.svg" alt="GitHub Logo">
+            <p>GitHub</p>
+          </div>
+        </div>
+      
+      </section>
+      <section id="contact__section">
+        <div id="contact__section__items">   
+       <div>
+         <img src="michael-rivera-n6BxzwOGTC4-unsplash.jpg">
+        </div> 
+        <div id="form__container">
+        <h2>Get in Touch!</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="form__element">
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="John Doe"/>  
+        </div>  
+           <div class="form__element">
+             <label for="email">Email:</label>
+             <input type="email" name="email" placeholder="johndoe@email.com"/>
+             <input type="hidden" name="access_key" value="73841614-deb3-409f-a859-e6b117585b3b"/>
+           </div>   
+           <div class="form__element">
+             <label for="name">Message:</label>
+             <textarea name="message" placeholder="I want to discuss...">
+             </textarea>
+           </div>  
+           <div class="form__element buttons">
+             <input type="submit" name="form__button" value="Send">
+             <input type="reset" name="form__reset" value="Reset">
+           </div>
+         </form>
+      
+          </div>
+          
+      </div>
         
-    </nav>
+        
+        
+      </section>
+      
 
 
-
+      <footer>
+        <div id="footer__copyright__container">
+          <p>designsbyleo.com</p>
+          <p>Copyright &#169 2025</p> 
+        </div>
+        <div id="footer__media__container">
+             <img src="5296501_linkedin_network_linkedin logo_icon.svg" alt="LinkedIn Logo">
+             <img src="5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.svg" alt="WhatsApp Logo">
+        </div>
+      </footer>
+      
 </body>
 </html>
