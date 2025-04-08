@@ -347,6 +347,9 @@ footer #footer__media__container img {
     max-width: 50%;
     font-size: 24px;
   }
+  #resume_section img {
+    display: none;
+  }
   #main-picture-container {
     height: 400px;
   }
