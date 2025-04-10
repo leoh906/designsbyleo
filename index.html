@@ -13,21 +13,26 @@
     <div id="main-picture-container">
         <img src="main-picture.jpg" alt="Palm Trees on a Beach" id="main-picture">
         <img src="designsbyleo_logo.png" alt="company logo" id="logo-picture">
-        <img src="doublearrowdownblue.svg" alt="doublechevron" id="down-arrows">
+        <a onclick="document.querySelector('#resume_section').scrollIntoView({ behavior: 'smooth' });"><img src="doublearrowdownblue.svg" alt="doublechevron" id="down-arrows"></a>
+      </div>
     </div>
     <section id="resume_section">
         <h1 class="resume__header">About</h1>
         <div id="resume__items">
-          <div id="resume_items_bio">
-            <p>A dedicated web developer with a mobile-first design approach.</p>
-            <p>Ensure your business stands out with professional web development services and proper maintenance.</p>
-            <button>
-              Resume 
-              <span class="material-symbols-outlined">download</span>
-            </button>
-      
             <div id="skills-container">
-              <h2>Skills</h2>
+              <div id="resume_items_bio">
+                <p>
+                  I’m a multilingual web developer with a mobile-first design approach. I specialize in creating professional, user-friendly websites using WordPress. 
+                  My experience includes projects for businesses, healthcare organizations, and professional sports organizations.
+                </p>
+                <p>I offer low-cost solutions that help your site stand out and perform smoothly. 
+                  Each site is built with long-term maintenance and real user engagement in mind.
+                </p>
+                <button type="submit" onclick="window.open('Leo-Harrison-Resume-20250326.pdf', '_blank')">
+                  Resume 
+                  <span class="material-symbols-outlined">download</span>
+                </button>
+                <h2>Skills</h2>
               <table>
                 <tr>
                   <td>WordPress</td>
@@ -53,35 +58,40 @@
           </div>
         </div>
     </section>
-
+    <h2 id="projects__header">Projects</h2>
       <section id="projects__section">
         <div class="projects__figures">
           <img src="Charlottesville_logo.jpg">
-          <p class="figure__summary">A website made for a professional football team in the United States.
+          <h3>Charlottesville Blues FC</h3>
+          <h3>USL League Two Expansion Team</h3>
+          <p>I worked closely with the club's leadership to build a WordPress site that defined the team's digital presence. This included designing the site to align with the club’s identity, sourcing local imagery to engage the community, and creating a user-friendly interface for fans and sponsors. I also helped integrate key features, such as schedule displays and sponsor sections, to support the team’s debut season and increase engagement with its growing audience.
           </p>
-          <button>View</button>
+          <button type="button" onclick="window.open('https://www.charlottesvillebluesfc.com/')">View</button>
         </div>
       
         <div class="projects__figures">
           <img src="towardsat.png">
-          <p>A defunct personal project aimed at increasing awareness of Web Accessibility Standards and emerging technology for individuals with disabilities.
+          <h3>towardsassistivetechnology.com</h3>
+          <p>An advocacy project promoting web accessibility and inclusive design.
+            This personal WordPress project highlighted emerging assistive technologies and encouraged digital leaders to build more accessible websites. I curated tools, wrote educational content, and was featured on a podcast discussing the importance of inclusive tech. Though now offline, it played a key role in my accessibility advocacy work.
           </p>
-          <button>View</button>
+          <button type="button" onclick="alert('No Preview Available')">View</button>
         </div>
       
         <div class="projects__figures">
           <img src="New Website Blue Mockup Instagram - Laptop.png">
-          <p>Managed the clinic’s WordPress site. Edited and translated videos and images for the website in both English and Spanish.
+          <h3>Payson Christian Clinic</h3>
+          <p>I maintained and updated the clinic’s bilingual WordPress site, edited multimedia content, and ensured accurate Spanish translations. I also integrated Google Analytics to track site performance and user engagement. My work supported the clinic’s mission to deliver telehealth and essential medical services to uninsured patients and low-income families in rural Arizona.
           </p>
-          <button>View</button>
+          <button type="button" onclick="window.open('https://paysonchristianclinic.com/')">View</button>
         </div>
       
         <div class="projects__figures" id="github__section">
           <h2>View More on GitHub</h2>
-          <div id="github__button">
+          <a href="https://github.com/leoh906" target="_blank" id="github__button">
             <img src="1298743_github_git_logo_social_icon.svg" alt="GitHub Logo">
-            <p>GitHub</p>
-          </div>
+            <p>Github</p>
+        </a>
         </div>
       
       </section>
@@ -129,8 +139,8 @@
           <p>Copyright &#169 2025</p> 
         </div>
         <div id="footer__media__container">
-             <img src="5296501_linkedin_network_linkedin logo_icon.svg" alt="LinkedIn Logo">
-             <img src="5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.svg" alt="WhatsApp Logo">
+             <a href="https://www.linkedin.com/in/leo-harrison-5a95941a5/" target="_blank"><img src="5296501_linkedin_network_linkedin logo_icon.svg" alt="LinkedIn Logo"></a>
+             <a href="https://wa.me/14802775259" target="_blank"><img src="5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.svg" alt="WhatsApp Logo"></a>
         </div>
       </footer>
       

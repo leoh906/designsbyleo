@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #f5f5f5;
   display: block;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #main-picture-container {
@@ -59,6 +64,14 @@ body {
   z-index: 1;
 }
 
+#projects__header {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 55px;
+  font-family: "Libre Baskerville", serif;
+  color: #209FC2;
+}
+
 #resume_section {
   display: flex;
   flex-direction: column;
@@ -89,21 +102,29 @@ body {
   gap: 8px;
   background-color: #209FC2;
 }
+#resume_section button:hover {
+  cursor: pointer;
+  background-color: #209FC2;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
 #resume_section #resume__items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
-  padding: 20px;
-  margin: 20px;
-}
-#resume_section #skills-container {
-  margin: 20px;
-  padding: 20px;
 }
 #resume_section #resume_items_bio {
-  margin: 20px;
   padding: 20px;
+  margin: 20px;
+}
+#resume_section #resume_items_bio p {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+}
+#resume_section #resume_items_bio h2 {
+  padding-top: 40px;
 }
 #resume_section table {
   border-spacing: 1em;
@@ -131,6 +152,12 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+#projects__section h3 {
+  padding-top: 10px;
+}
+#projects__section h2 {
+  padding: 20px;
+}
 #projects__section .projects__figures {
   display: flex;
   flex-direction: column;
@@ -144,7 +171,7 @@ body {
   height: 500px;
 }
 #projects__section p {
-  width: 50%;
+  width: 75%;
   text-align: center;
   margin: 0 auto;
   padding: 20px;
@@ -153,10 +180,11 @@ body {
   background-color: #209fc2;
   margin: 10px auto;
   display: block;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 20px;
   border-radius: 5px;
   border-radius: 10px;
+  cursor: pointer;
 }
 #projects__section #github__section {
   display: flex;
@@ -176,10 +204,21 @@ body {
   align-items: center;
   padding: 5px;
   border-radius: 50px;
+  text-decoration: none;
+}
+#projects__section #github__button:visited {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 #projects__section #github__button p {
   padding: 20px;
   margin: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+#projects__section #github__button p:visited {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 #projects__section #github__button img {
   border-radius: 50px;
@@ -202,6 +241,7 @@ footer #footer__copyright__container {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  color: #FFFFFF;
 }
 footer #footer__media__container {
   display: flex;
@@ -213,18 +253,14 @@ footer #footer__media__container img {
   height: 50px;
 }
 
-@media (max-width: 576px) {
-  #main-picture {
-    width: 412px;
-    height: 247px;
-    object-fit: cover;
-    object-position: center right;
-  }
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#contact__section h2 {
+  margin-top: 30px;
 }
 
 #contact__section__items {
@@ -258,6 +294,8 @@ footer #footer__media__container img {
   width: 100%;
   padding: 1rem;
   font-size: 1.2rem;
+  vertical-align: left;
+  text-align: left;
 }
 #contact__section__items .form__element {
   display: flex;
@@ -304,7 +342,7 @@ footer #footer__media__container img {
   background-color: darkblue;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #contact__section__items {
     flex-direction: column;
     align-items: center;
@@ -313,8 +351,6 @@ footer #footer__media__container img {
     max-width: 100%;
     height: auto;
   }
-}
-@media screen and (max-width: 768px) {
   #projects__section {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -337,6 +373,14 @@ footer #footer__media__container img {
   }
   #github__button p {
     font-size: 18px;
+  }
+  #github__button a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  #github__button a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
   }
   #resume_section {
     flex-direction: column;
@@ -367,11 +411,11 @@ footer #footer__media__container img {
     transform: translate(-50%, -50%);
   }
   #main-picture-container #down-arrows {
-    top: 80%;
-    left: 50%;
-    width: 10%;
+    top: 33%;
+    left: 45%;
+    width: 15%;
     position: absolute;
-    top: 37%;
+    cursor: pointer;
   }
   #resume_section {
     flex-direction: column;
@@ -381,21 +425,105 @@ footer #footer__media__container img {
     margin: 5px;
   }
   #resume_section #resume_items_bio {
-    margin: 10px;
-    padding: 10px;
     justify-content: center;
     text-align: center;
-  }
-  #resume_section p {
-    width: 75%;
-    font-size: 18px;
-    text-align: center;
     margin: 0 auto;
+    padding: 0px 10px;
+  }
+  #resume_section #resume_items_bio p {
+    max-width: 100%;
+    box-sizing: border-box;
   }
   #resume_section table {
     width: 75%;
     border-spacing: 0.5em;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #main-picture-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #main-picture-container #logo-picture {
+    width: 50%;
+    height: auto;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  #main-picture-container #down-arrows {
+    top: 55%;
+    left: 50%;
+    width: 10%;
+    position: absolute;
+  }
+  #main-picture-container #down-arrows:hover {
+    cursor: pointer;
+    fill: #209FC2;
+  }
+  #resume__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #resume__section p {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  #resume__section .resume__header {
+    text-align: center;
+  }
+  #projects__section {
+    display: flex;
+    flex-direction: column;
+  }
+  #projects__section img {
+    width: 300px;
+    height: 300px;
+  }
+  #projects__section .projects__figures {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  #projects__section p {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+  }
+  #projects__section button {
+    background-color: #209fc2;
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-radius: 10px;
+  }
+  #contact__section__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  #contact__section__items img {
+    width: 100%;
+    height: auto;
+  }
+  #contact__section__items form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+  }
+  #contact__section__items input, #contact__section__items select, #contact__section__items button {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
