@@ -464,6 +464,13 @@ body {
 
     #github__button p {
         font-size: 18px;
+        text-decoration: none;
+        color: #FFFFFF;
+
+        &:visited {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
 
     }
 
