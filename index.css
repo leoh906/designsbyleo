@@ -373,6 +373,12 @@ footer #footer__media__container img {
   }
   #github__button p {
     font-size: 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  #github__button p:visited {
+    color: #FFFFFF;
+    text-decoration: none;
   }
   #github__button a {
     text-decoration: none;
